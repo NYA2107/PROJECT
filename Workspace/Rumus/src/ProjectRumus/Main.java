@@ -1,0 +1,564 @@
+package ProjectRumus;
+
+import java.util.Scanner;
+
+class rumus{//class paling atas
+	String nama;
+	
+	
+	public String showNama() {
+		return nama;
+	}
+	
+	public void showDeskripsi() {
+		
+	}
+	
+}
+
+class matematika extends rumus{//anak dari class rumus
+	
+	matematika(){//constructor
+		nama = "Matematika";
+		
+	}
+	@Override
+	public String showNama() {//override dari method showNama di rumus
+		return nama;
+	}
+	
+	@Override
+	public void showDeskripsi() {
+		
+	}
+	
+	
+}
+
+class fisika extends rumus{
+	
+	fisika(){
+		nama = "Fisika";
+	}
+	
+	@Override
+	public String showNama() {
+		return nama;
+	}
+	
+	@Override
+	public void showDeskripsi() {
+		
+	}
+	
+}
+
+class bangunDatar extends matematika{
+	bangunDatar(){
+		nama = "Bangun Datar";
+
+	}
+	
+	
+	@Override
+	public String showNama() {
+		return nama;
+	}
+	
+	@Override
+	public void showDeskripsi() {
+		
+	}
+	
+}
+
+class bangunRuang extends matematika{
+	bangunRuang(){
+		nama = "Bangun Ruang";
+
+	}
+	
+	
+	@Override
+	public String showNama() {
+		return nama;
+	}
+	
+	@Override
+	public void showDeskripsi() {
+		
+	}
+	
+}
+
+
+
+class luasPersegi extends bangunDatar {
+	
+	public double hasil;
+	
+	luasPersegi(){
+		nama = "||LUAS PERSEGI||";
+		
+	}
+	
+	
+	@Override
+	public String showNama() {
+		return nama;
+	}
+	
+	@Override
+	public void showDeskripsi() {
+		System.out.println("Ket : s = panjang sisi");
+	}
+	
+	
+	public void hitung(double s){
+		hasil = s*s;
+	}
+	
+	public double showHitung() {
+		return hasil;
+	}
+	
+}
+
+class luasPersegiPanjang extends bangunDatar {
+	
+	public double hasil;
+	
+	luasPersegiPanjang(){
+		nama = "||LUAS PERSEGI PANJANG||";
+	}
+	
+	
+	@Override
+	public String showNama() {
+		return nama;
+	}
+	
+	@Override
+	public void showDeskripsi() {
+		System.out.println("Ket : p = panjang sisi" + "\n"
+						+  "      l = lebar sisi");
+	}
+	
+	
+	public void hitung(double p, double l){
+		hasil = p*l;
+	}
+	
+	public double showHitung() {
+		return hasil;
+	}
+	
+}
+
+class volumekubus extends bangunRuang {
+public double hasil;
+	
+	volumekubus(){
+		nama = "||VOLUME KUBUS||";
+	}
+	
+	
+	@Override
+	public String showNama() {
+		return nama;
+	}
+	
+	@Override
+	public void showDeskripsi() {
+		System.out.println("Ket : s = panjang sisi");
+	}
+	
+	
+	public void hitung(double s){
+		hasil = s*s*s;
+	}
+	
+	public double showHitung() {
+		return hasil;
+	}
+}
+
+class volumebalok extends bangunRuang {
+public double hasil;
+	
+	volumebalok(){
+		nama = "||VOLUME BALOK||";
+	}
+	
+	
+	@Override
+	public String showNama() {
+		return nama;
+	}
+	
+	@Override
+	public void showDeskripsi() {
+		System.out.println("Ket : p = Panjang" + "\n"
+						+  "      l = Lebar" + "\n"
+						+  "      t = Tinggi");
+	}
+	
+	
+	public void hitung(double p, double l, double t){
+		hasil = p*l*t;
+	}
+	
+	public double showHitung() {
+		return hasil;
+	}
+}
+
+class kecepatan extends fisika{
+public double hasil;
+	
+	kecepatan(){
+		nama = "||KECEPATAN||";
+	}
+	
+	
+	@Override
+	public String showNama() {
+		return nama;
+	}
+	
+	@Override
+	public void showDeskripsi() {
+		System.out.println("Ket : S = Jarak Tempuh" + "\n"
+						+  "      t = Waktu Tempuh");
+	}
+	
+	
+	public void hitung(double S,  double t){
+		hasil = S/t;
+	}
+	
+	public double showHitung() {
+		return hasil;
+	}
+}
+
+class tekanan extends fisika{
+public double hasil;
+	
+	tekanan(){
+		nama = "||TEKANAN||";
+	}
+	
+	
+	@Override
+	public String showNama() {
+		return nama;
+	}
+	
+	@Override
+	public void showDeskripsi() {
+		System.out.println("Ket : F = Gaya" + "\n"
+						+  "      A = Area");
+	}
+	
+	
+	public void hitung(double F,  double A){///////////////Menggunakan double karena agar bisa koma koma
+		hasil = F/A;
+	}
+	
+	public double showHitung() {
+		return hasil;
+	}
+}
+
+public class Main {//class main
+
+	public static void main(String[] args) {
+		
+		
+		Scanner scan = new Scanner(System.in);
+		System.out.println("++======================================================================++");
+		System.out.println("||                     K A L K U L A T O R  R U M U S                   ||");
+		System.out.println("++======================================================================++");
+		System.out.println("||Selamat menggunakan kalkulator rumus, terdapat beberapa rumus. cekidot||");
+		System.out.println("++======================================================================++");
+		System.out.println("||                             A U T H O R                              ||");
+		System.out.println("++======================================================================++");
+		System.out.println("||Nama : Imam Najibulloh HR                                             ||");
+		System.out.println("||NIM  : M0516027                                                       ||");
+		System.out.println("++======================================================================++");
+		System.out.println("Press ENTER key to Continue");
+		 try
+	        {
+	            System.in.read();
+	        }  
+	     catch(Exception e){} 
+		System.out.println();
+		System.out.println();
+		
+	while(true) {
+		System.out.println("+--------+");
+		System.out.println("|MENU    |");
+		System.out.println("+--------+");
+		System.out.println("|1. RUMUS|" + "\n"
+						 + "|2. EXIT |");
+		System.out.println("+--------+");
+		System.out.println("Pilih Menu :");
+		int menu = scan.nextInt();
+		switch(menu) {
+		case 1: {
+			System.out.println();
+			System.out.println("+-------------+");
+			System.out.println("|SUBJECT      |");
+			System.out.println("+-------------+");
+			System.out.println("|1. Matematika| " + "\n"
+							 + "|2. Fisika    |");
+			System.out.println("+-------------+");
+			System.out.println("Pilih Subject :");
+			int pilihSubject = scan.nextInt();
+			switch(pilihSubject) {
+				case 1:{//Matematika
+					System.out.println();
+					System.out.println("+---------------+");
+					System.out.println("|BANGUN         |");
+					System.out.println("+---------------+");
+					System.out.println("|1. Bangun Datar| " + "\n"
+					 		 +         "|2. Bangun Ruang|");
+					System.out.println("+---------------+");
+					System.out.println("Pilih Bangun : ");
+					int pilihBangun = scan.nextInt();
+						switch(pilihBangun) {
+							case 1 :{//bangun datar
+								System.out.println();
+								System.out.println("+-----------------------+");
+								System.out.println("|RUMUS                  |");
+								System.out.println("+-----------------------+");
+								System.out.println("|1. Luas Persegi        |" + "\n"
+										 		 + "|2. Luas Persegi Panjang|");
+								System.out.println("+-----------------------+");
+								System.out.println("Pilih Rumus :");
+								int pilihRumus = scan.nextInt();
+									switch(pilihRumus) {
+										case 1:{//luas persegi
+											mainluaspersegi();
+											System.out.println("Press ENTER key to Continue");
+											 try
+										        {
+										            System.in.read();
+										        }  
+										     catch(Exception e){}  
+											 System.out.println();
+											break;
+											
+										}
+										case 2:{//luas persegi panjang
+											mainluaspersegipanjang();
+											System.out.println("Press ENTER key to Continue");
+											 try
+										        {
+										            System.in.read();
+										        }  
+										     catch(Exception e){}  
+											System.out.println();
+											break;
+										}
+									}
+								
+								break;
+							}
+							case 2:{//bangun ruang
+								System.out.println();
+								System.out.println("RUMUS");
+								System.out.println("1. Volume Kubus " + "\n"
+										 		 + "2. Volume Balok");
+								System.out.println("Pilih Rumus :");
+								int pilihRumus = scan.nextInt();
+								switch(pilihRumus) {
+									case 1:{//luas persegi
+										mainvolumekubus();
+										System.out.println("Press ENTER key to Continue");
+										 try
+									        {
+									            System.in.read();
+									        }  
+									     catch(Exception e){}  
+										System.out.println();
+										break;
+									}
+									case 2:{//luas persegi panjang
+										mainvolumebalok();
+										System.out.println("Press ENTER key to Continue");
+										 try
+									        {
+									            System.in.read();
+									        }  
+									     catch(Exception e){}  
+										System.out.println();
+										break;
+									}
+								}
+								break;
+							}
+					
+					}
+						break;
+				}
+				case 2:{//Fisika
+					System.out.println();
+					System.out.println("RUMUS");
+					System.out.println("1. Kecepatan " + "\n"
+							 		 + "2. Tekanan");
+					System.out.println("Pilih Rumus :");
+					int pilihRumus = scan.nextInt();
+						switch(pilihRumus) {
+							case 1:{
+									mainkecepatan();
+									System.out.println("Press ENTER key to Continue");
+									 try
+								        {
+								            System.in.read();
+								        }  
+								     catch(Exception e){}  
+									System.out.println();
+								break;
+							}
+							case 2:{
+									maintekanan();
+									System.out.println("Press ENTER key to Continue");
+
+
+									
+									System.out.println();
+								break;
+							}
+						}
+					}
+				}
+			break;
+			}
+		case 2:{
+			System.out.println();
+			System.out.println();
+			System.out.println();
+			System.out.println();
+			System.out.println();
+			System.out.println();
+			System.out.println();
+			System.out.println();
+			
+			System.out.println("++============++");
+			System.out.println("||TERIMA KASIH||");
+			System.out.println("++============++");
+			
+			System.out.println();
+			System.out.println();
+			System.out.println();
+			System.out.println();
+			System.out.println();
+			System.out.println();
+			System.out.println();
+			System.out.println();
+			scan.close();
+			System.exit(0);
+			break;
+		}
+		}
+	}
+}
+//dibawah ini method method yang memanggil method pada class di atas main class	
+	public static void mainluaspersegi() {
+		Scanner scan = new Scanner(System.in);
+		luasPersegi a = new luasPersegi();
+		
+		System.out.println();
+		System.out.println();
+		System.out.println(a.showNama());
+		a.showDeskripsi();
+		System.out.println();
+		System.out.println("Masukkan s :");
+		a.hitung(scan.nextDouble());
+		System.out.println("Hasil : " + a.showHitung());
+		System.out.println();
+		
+	}
+	
+	public static void mainluaspersegipanjang() {
+		Scanner scan = new Scanner(System.in);
+		luasPersegiPanjang a = new luasPersegiPanjang();
+		
+		System.out.println();
+		System.out.println();
+		System.out.println(a.showNama());
+		a.showDeskripsi();
+		System.out.println();
+		System.out.println("Masukkan p dan l :");
+		a.hitung(scan.nextDouble(), scan.nextDouble());
+		System.out.println("Hasil : " + a.showHitung());
+		System.out.println();
+		
+	}
+	
+	public static void mainvolumekubus() {
+		Scanner scan = new Scanner(System.in);
+		volumekubus a = new volumekubus();
+		
+		System.out.println();
+		System.out.println();
+		System.out.println(a.showNama());
+		a.showDeskripsi();
+		System.out.println();
+		System.out.println("Masukkan s :");
+		a.hitung(scan.nextDouble());
+		System.out.println("Hasil : " + a.showHitung());
+		System.out.println();
+	
+	}
+	
+	public static void mainvolumebalok() {
+		Scanner scan = new Scanner(System.in);
+		volumebalok a = new volumebalok();
+		
+		System.out.println();
+		System.out.println();
+		System.out.println(a.showNama());
+		a.showDeskripsi();
+		System.out.println();
+		System.out.println("Masukkan p, l dan t :");
+		a.hitung(scan.nextDouble(), scan.nextDouble() , scan.nextDouble());
+		System.out.println("Hasil : " + a.showHitung());
+		System.out.println();
+	
+	}
+	
+	public static void mainkecepatan() {
+		Scanner scan = new Scanner(System.in);
+		kecepatan a = new kecepatan();
+		
+		System.out.println();
+		System.out.println();
+		System.out.println(a.showNama());
+		a.showDeskripsi();
+		System.out.println();
+		System.out.println("Masukkan S dan t :");
+		a.hitung(scan.nextDouble(), scan.nextDouble());
+		System.out.println("Hasil : " + a.showHitung());
+		System.out.println();
+		
+	}
+
+	public static void maintekanan() {
+		Scanner scan = new Scanner(System.in);
+		tekanan a = new tekanan();
+		
+		System.out.println();
+		System.out.println();
+		System.out.println(a.showNama());
+		a.showDeskripsi();
+		System.out.println();
+		System.out.println("Masukkan F dan A :");
+		a.hitung(scan.nextDouble(), scan.nextDouble());
+		System.out.println("Hasil : " + a.showHitung());
+		System.out.println();
+		
+	}
+}

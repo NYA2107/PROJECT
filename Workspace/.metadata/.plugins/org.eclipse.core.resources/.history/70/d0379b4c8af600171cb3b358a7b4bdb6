@@ -1,0 +1,28 @@
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class Main {
+	
+	
+	public void selectAll(){
+        String sql = "SELECT id, name, capacity FROM warehouses";
+        
+        try {
+        	Connection conn = sqliteConnection.connect();
+            Statement stmt  = conn.createStatement();
+            ResultSet rs    = stmt.executeQuery(sql);
+  
+            
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+    }
+	
+	public static void main(String[] args) {
+		sqliteConnection.connect();
+
+	}
+
+}

@@ -1,0 +1,4 @@
+java,db,sda,php
+matdis,allin,osk,logsam
+sisdig,prob,citra,metfor
+kp,pbo,signal,simpem

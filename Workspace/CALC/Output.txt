@@ -1,0 +1,18 @@
+Sisi Pertama : 1
+Sisi Kedua : 2
+Hasil Luas : 2
+Hasil Keliling : 6
+=========================================================================
+
+Sisi Pertama : 3
+Sisi Kedua : 4
+Hasil Luas : 12
+Hasil Keliling : 14
+=========================================================================
+
+Sisi Pertama : 5
+Sisi Kedua : 6
+Hasil Luas : 30
+Hasil Keliling : 22
+=========================================================================
+

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+		<item value="F:\Workspace\PPSDAII_RESPONSI2_M0516009_ALIM_WICAKSONO_HARI_P\PPSDAII_RESPONSI2_M0516009_ALIM WICAKSONO HARI P"/>
+		<item value="D:\JavaCollection_M0516027_IMAM NAJIBULLOH HR"/>
+		<item value="D:\JavaCollection_M0516009_ALIM WICAKSONO HARI P"/>
+		<item value="C:\Users\PAIJO\Downloads\PSDAII_Praktikum4\PSDAII_PRAKTIKUM4"/>
+		<item value="C:\Users\PAIJO\Downloads\stringMatching\stringMatching"/>
+		<item value="D:\Paper"/>
+		<item value="F:\Workspace\PSDAII_Praktikum2_M0516046_ZULFIKAR EKA SAGATA"/>
+		<item value="C:\Users\PAIJO\Downloads\PSDAII_Praktikum1_M0516046_ZULFIKAR EKA SAGATA\PSDAII01"/>
+		<item value="C:\Users\PAIJO\Documents\PSDA 06\PSDA06_M0516046_ZULFIKAR EKA SAGATA\RBTree"/>
+		<item value="C:\Users\PAIJO\Desktop\PSDA03 - Stack and Queue\StackAndQueue"/>
+	</list>
+	<section name="NewWizardAction">
+		<item value="org.eclipse.fx.ide.jdt.ui.javafx" key="NewWizardSelectionPage.STORE_SELECTED_ID"/>
+		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
+			<item value="org.eclipse.jdt.ui.java"/>
+			<item value="org.eclipse.fx.ide"/>
+		</list>
+	</section>
+</section>

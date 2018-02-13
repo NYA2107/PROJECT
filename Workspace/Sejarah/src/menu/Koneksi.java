@@ -1,0 +1,35 @@
+package menu;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+import javax.swing.JOptionPane;
+
+public class Koneksi {
+
+	String uname;
+	String passwd;
+	Connection conn = null;
+	// private static Connection mysqlkonek;
+
+	// public static Statement stm;
+	public Connection koneksiDB() throws SQLException {
+		if (conn == null) {
+			try {
+				// String DB = "jdbc:mysql://localhost/sejarahfixbanget"; //
+				// DriverManager.registerDriver(new com.mysql.jdbc.Driver());
+				// mysqlkonek = DriverManager.getConnection(DB, "root", "");
+
+				String url = "jdbc:sqlite:src/schoolsystem.sqlite";
+				// create a connection to the database
+				conn = DriverManager.getConnection(url);
+				System.out.println("Koneksi berhasil");
+			} catch (Exception e) {
+				JOptionPane.showMessageDialog(null, "KONEKSI GAGAL");
+			}
+		}
+		return conn;
+	}
+
+}

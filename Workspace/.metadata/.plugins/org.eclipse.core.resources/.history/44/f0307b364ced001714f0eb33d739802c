@@ -1,0 +1,84 @@
+package Gui;
+
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.*;
+import javax.swing.border.EmptyBorder;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+
+public class gui extends JFrame {
+
+	private JPanel contentPane;
+	private JTextField textField;
+	private JTextField c,a,b;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					gui frame = new gui();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public gui() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 450, 300);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		TextField();
+		int d = Integer.parseInt(a.getText());
+		int e = Integer.parseInt(b.getText());
+		Button(d,e);
+		
+	}
+	
+	public void TextField() {
+		a = new JTextField();
+		a.setBounds(86, 5, 318, 20);
+		contentPane.add(a);
+		
+		b = new JTextField();
+		b.setBounds(86, 27, 318, 20);
+		contentPane.add(b);
+		
+		c = new JTextField();
+		c.setBounds(86, 92, 318, 20);
+		contentPane.add(c);
+	}
+	
+	public void Button(int a, int b) {
+		JButton Hitung = new JButton("Hitung");
+		Hitung.setBounds(86, 58, 89, 23);
+		contentPane.add(Hitung);
+		
+		Hitung.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				c.setText(a + b);
+			}
+		});
+		
+		
+		
+		
+	}
+	
+	public void hitung(int a, int b) {
+		
+		
+	}
+}

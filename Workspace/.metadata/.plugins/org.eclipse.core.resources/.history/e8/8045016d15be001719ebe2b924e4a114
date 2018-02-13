@@ -1,0 +1,114 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package stringmatching;
+
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+
+/**
+ *
+ * @author SalsaFS
+ */
+public class Penghitung {
+    BruteForce bf = new BruteForce();
+    KMP kmp = new KMP();
+    BoyerMoore bm = new BoyerMoore();
+    String text;
+    
+    //membuat 1 method menghitung waktu eksekusi setiap algoritma string matching
+    public void input(String namafile) {
+    	 // The name of the file to open.
+       
+
+        // This will reference one line at a time
+        String line = null;
+
+        try {
+            // FileReader reads text files in the default encoding.
+            FileReader fileReader = 
+                new FileReader(namafile);
+
+            // Always wrap FileReader in BufferedReader.
+            BufferedReader bufferedReader = 
+                new BufferedReader(fileReader);
+
+            while((line = bufferedReader.readLine()) != null) {
+                text = line;
+                System.out.println(line);
+            }   
+
+            // Always close files.
+            bufferedReader.close();         
+        }
+        catch(FileNotFoundException ex) {
+            System.out.println(
+                "Unable to open file '" + 
+                namafile + "'");                
+        }
+        catch(IOException ex) {
+            System.out.println(
+                "Error reading file '" 
+                + namafile + "'");                  
+            // Or we could just do this: 
+            // ex.printStackTrace();
+        }
+    }
+    
+    
+    public void find(String a) {
+    	
+    	long startTime1 = System.currentTimeMillis();
+    	int ketemuBF = bf.cariBF(text, a);
+    	long endTime1   = System.currentTimeMillis();
+    	long totalTime1 = endTime1 - startTime1;
+
+    	double startTime2 = System.currentTimeMillis();
+    	int ketemuKMP2 = kmp.cariKMP(text, a);
+    	double endTime2   = System.currentTimeMillis();
+    	double totalTime2 = endTime2 - startTime2;
+    	
+    	double startTime3 = System.currentTimeMillis();
+    	int ketemuBM = bm.cariBM(text, a);
+    	double endTime3   = System.currentTimeMillis();
+    	double totalTime3 = endTime3 - startTime3;
+    	
+    	if(ketemuBF == -1) {
+    		System.out.println("Pattern tidak ditemukan");
+    	}
+    	else {
+    		System.out.println("Pattern ditemukan di :" + ketemuBF);
+    		System.out.println("Brute Force : " + totalTime1 + "\n"
+    						 + "KMP         : " + totalTime2 + "\n"
+    						 + "Bayer Moore : " + totalTime3 + "\n");
+    	}
+    }
+    
+    public void direplace(String pattern, String replace) {
+    	
+    }
+    
+    public int penghitung(String text, String pattern) {
+        int hitung = 0, n = text.length(), m = pattern.length();
+        for (int i = 0; i <= (n - m); i++) {
+            int j = 0;
+            while ((j < m) && (text.charAt(i + j) == pattern.charAt(j))) {
+                j++;
+            }
+            if (j == m) {
+                hitung++;
+            }
+        }
+        return hitung;
+    }
+    
+    public void replace(String text, String pattern, String replace) {
+        
+        String textReplace = text.replaceAll(pattern, replace);
+        System.out.println(textReplace);
+    }
+}

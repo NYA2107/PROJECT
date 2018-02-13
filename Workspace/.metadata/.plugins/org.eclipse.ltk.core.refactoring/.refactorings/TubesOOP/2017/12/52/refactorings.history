@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Encapsulate field &apos;code.variabel.x&apos; in &apos;code.variabel&apos;&#x0D;&#x0A;- Original project: &apos;TubesOOP&apos;&#x0D;&#x0A;- Original element: &apos;code.variabel.x&apos;&#x0D;&#x0A;- Getter method name: &apos;getX&apos;&#x0D;&#x0A;- Setter method name: &apos;setX&apos;&#x0D;&#x0A;- Field visibility: &apos;public&apos;&#x0D;&#x0A;- Use getter and setter methods in declaring type" comments="false" declaring="true" description="Encapsulate field &apos;x&apos;" flags="589830" getter="getX" id="org.eclipse.jdt.ui.self.encapsulate" input="/src&lt;code{App.java[variabel^x" insertion="-1" setter="setX" stamp="1514370206183" version="1.0" visibility="1"/>
+</session>

@@ -1,0 +1,62 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package stringmatching;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author SalsaFS
+ */
+
+public class stringMatching {
+
+    public static void main(String[] args){
+        
+        Scanner scan = new Scanner(System.in);
+        Penghitung h = new Penghitung();
+        System.out.println("\t=== PROGRAM STRING MATCHING ===");
+        
+        do {
+            Menu();
+            int menu = scan.nextInt();
+            switch (menu) {
+                case 1:{
+                	scan.nextLine();
+                	String namafile = scan.nextLine();
+                	h.input(namafile);                    
+                    break;
+                }
+                case 2: {
+                	System.out.print("tes : ");
+                	scan.nextLine();
+                	String pattern = scan.nextLine();
+                    h.find(pattern);
+                    break;
+                }
+                case 3: {
+                    //replace pattern
+                    break;
+                }
+                case 4: {
+                    //exit
+                    return;
+                }
+                default:
+                    System.out.println("\nWrong!");
+            }
+        } while (true);
+    }
+
+    private static void Menu() {
+        System.out.println("\n1. Input Text"
+                + "\n2. Find\n"
+                + "3. Replace\n"
+                + "4. Exit");
+        System.out.print("Your Choice: ");
+    }
+
+}

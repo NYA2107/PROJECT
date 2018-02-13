@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.wb.internal.swing.MigLayout.model.ui.CellEditDialog">
+		<item value="532" key="x"/>
+		<item value="302" key="width"/>
+		<item value="320" key="y"/>
+		<item value="127" key="height"/>
+	</section>
+</section>
